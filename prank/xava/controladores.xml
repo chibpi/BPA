@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+
+<!DOCTYPE aplicacion SYSTEM "dtds/controladores.dtd">
+
+<controladores>
+
+<controlador nombre="Reto">
+ <hereda-de controlador="Typical"/>
+ <accion nombre="retar" oculta="true" clase="org.chibpi.prank.acciones.Retar">
+  <usa-objeto nombre="xava_view"/>
+ </accion>
+ <accion nombre="aceptar" oculta="true" clase="org.chibpi.prank.acciones.Aceptar">
+  <usa-objeto nombre="xava_view"/>
+ </accion>
+ <accion nombre="comunicar" oculta="true" clase="org.chibpi.prank.acciones.DarResultado">
+   <usa-objeto nombre="xava_view"/>
+ </accion>
+ <accion nombre="aceptar" oculta="true" clase="org.chibpi.prank.acciones.AceptarResultado">
+  <usa-objeto nombre="xava_view"/>
+ </accion>
+
+</controlador>
+</controladores>
