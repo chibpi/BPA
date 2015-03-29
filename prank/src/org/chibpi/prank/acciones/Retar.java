@@ -12,6 +12,7 @@ public class Retar extends CollectionBaseAction{
 			Reto reto = (Reto) o;
 			reto.setEstado(Reto.Estado.Propuesto);
 			XPersistence.getManager().persist(reto);
+			getView().refresh();
 		}
 	}
 

@@ -39,13 +39,13 @@ public class Reto implements Comparable{
 	@Column(length=150)
 	private String comentarioReto;
 
-	public Reto(Pareja pareja, Pareja otraPareja, HoraDisponible hora) {
-		this.pareja1=pareja;
-		this.pareja2=otraPareja;
-		this.fechaHora=siguienteFechaHora(hora);
+	public Reto() {
+		
 	}
+	
 
-	private Date siguienteFechaHora(HoraDisponible hora) {
+
+	public static Date siguienteFechaHora(HoraDisponible hora) {
 		// TODO Auto-generated method stub
 		Calendar now = Calendar.getInstance();
 		int weekday = now.get(Calendar.DAY_OF_WEEK);
@@ -65,7 +65,7 @@ public class Reto implements Comparable{
 
 	}
 
-	private int calculaWeekday(HoraDisponible hora) {
+	private static int calculaWeekday(HoraDisponible hora) {
 		switch(hora.getDia()) {
 			case Lunes:
 				return Calendar.MONDAY;

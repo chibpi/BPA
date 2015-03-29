@@ -127,7 +127,11 @@ public class Pareja implements Comparable{
 				for (HoraDisponiblePareja horaOtraPareja: otraPareja.getHorasDisponibilidad()) {
 					for (HoraDisponiblePareja hora: this.getHorasDisponibilidad()) {
 						if (horaOtraPareja.getHoraDisponible().compareTo(hora.getHoraDisponible())==0) {
-							horas.add(new Reto(this,otraPareja,hora.getHoraDisponible()));
+							Reto r = new Reto();
+							r.setPareja1(this);
+							r.setPareja2(otraPareja);
+							r.setFechaHora(Reto.siguienteFechaHora(hora.getHoraDisponible()));
+							horas.add(r);
 						}
 					}
 				}

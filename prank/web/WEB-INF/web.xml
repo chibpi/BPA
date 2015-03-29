@@ -20,7 +20,32 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 	 
 
 	<!-- Addons filters begin --> 
-
+	<filter>
+		<filter-name>naviox</filter-name>
+		<filter-class>com.openxava.naviox.web.NaviOXFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>naviox</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>		
+	<filter-mapping>
+		<filter-name>naviox</filter-name>
+		<url-pattern>/modules/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>	
+	<filter-mapping>
+		<filter-name>naviox</filter-name>
+		<servlet-name>naviox</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>naviox</filter-name>
+		<servlet-name>module</servlet-name>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>naviox</filter-name>
+		<servlet-name>phone</servlet-name>
+	</filter-mapping>
 	<!-- Addons filters end -->		
 			
 	
@@ -62,8 +87,8 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 		<servlet-class>org.openxava.web.servlets.FilesServlet</servlet-class>
 	</servlet>
 	<servlet>
-	    <servlet-name>modules</servlet-name>
-	    <servlet-class>org.openxava.web.servlets.ModuleServlet</servlet-class>
+		<servlet-name>naviox</servlet-name>
+		<servlet-class>com.openxava.naviox.web.NaviOXServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>phone</servlet-name>
@@ -90,8 +115,8 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 	
 	
 	<servlet-mapping>
-	    <servlet-name>modules</servlet-name>
-	    <url-pattern>/modules/*</url-pattern>
+		<servlet-name>naviox</servlet-name>
+		<url-pattern>/modules/*</url-pattern>
 	</servlet-mapping>	
 	<servlet-mapping>
 		<servlet-name>images</servlet-name>
@@ -132,6 +157,10 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 	<servlet-mapping>
 		<servlet-name>files</servlet-name>
 		<url-pattern>/xava/xfile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>naviox</servlet-name>
+		<url-pattern>/m/*</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>phone</servlet-name>

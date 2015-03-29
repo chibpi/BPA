@@ -7,7 +7,7 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 
 @Entity
-@View(members="Dia;hora")
+@View(members="dia;hora")
 public class HoraDisponible implements Comparable{
 
 	@Id @Hidden
