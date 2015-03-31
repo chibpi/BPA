@@ -17,13 +17,13 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 	
 	<display-name>OpenXava Application</display-name>
 	
-	@listeners.xml@ 
+	 
 
 	<!-- Addons filters begin --> 
 
 	<!-- Addons filters end -->		
 			
-	@filters.xml@
+	
 	
 	<servlet>
 		<servlet-name>images</servlet-name>
@@ -87,7 +87,7 @@ If you want to add filters add them in filters.xml file in WEB-INF.
 		<load-on-startup>12</load-on-startup>
 	</servlet>	
 		
-	@servlets.xml@
+	
 	
 	<servlet-mapping>
 	    <servlet-name>modules</servlet-name>

@@ -68,6 +68,8 @@ public class Reto implements Comparable{
 		
 		now.set(Calendar.HOUR_OF_DAY, hora.getHoraInt());
 		now.set(Calendar.MINUTE, hora.getMinuntoInt());
+		now.set(Calendar.SECOND,0);
+		now.set(Calendar.MILLISECOND,0);
 		return now.getTime();
 
 	}
