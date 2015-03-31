@@ -153,6 +153,10 @@ public class Pareja implements Comparable{
 	@OneToMany (mappedBy="pareja1", cascade=CascadeType.REMOVE) @ReadOnly
 //	@OrderBy("horaDisponible.dia,horaDisponible.hora")
 	@ListProperties("pareja1.nombre,pareja2.nombre,fechaHora,estado,ganador.nombre,")
+	@RowActions ({
+		@RowAction("Reto.aceptar"),
+		@RowAction("Reto.rechazar")
+	})
 	public Collection<Reto> getRetos() {
 		TreeSet<Reto> retos=new TreeSet<Reto>();
 		retos.addAll(this.getRetosPropuestos());

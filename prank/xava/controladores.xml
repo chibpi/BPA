@@ -12,10 +12,13 @@
  <accion nombre="aceptar" oculta="true" clase="org.chibpi.prank.acciones.Aceptar">
   <usa-objeto nombre="xava_view"/>
  </accion>
+ <accion nombre="rechazar" oculta="true" clase="org.chibpi.prank.acciones.Rechazar">
+  <usa-objeto nombre="xava_view"/>
+ </accion>
  <accion nombre="comunicar" oculta="true" clase="org.chibpi.prank.acciones.DarResultado">
    <usa-objeto nombre="xava_view"/>
  </accion>
- <accion nombre="aceptar" oculta="true" clase="org.chibpi.prank.acciones.AceptarResultado">
+ <accion nombre="aceptarResultado" oculta="true" clase="org.chibpi.prank.acciones.AceptarResultado">
   <usa-objeto nombre="xava_view"/>
  </accion>
 

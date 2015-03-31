@@ -38,7 +38,7 @@ public class Reto implements Comparable{
 
 	@Enumerated(EnumType.STRING)
 	 private Estado estado;
-	 public enum Estado { Propuesto, Aceptado, Jugado };
+	 public enum Estado { Propuesto, Aceptado, Rechazado, Jugado };
 	
 	@Column(length=20)
 	private String resultado;
