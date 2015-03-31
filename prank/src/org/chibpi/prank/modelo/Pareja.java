@@ -131,7 +131,17 @@ public class Pareja implements Comparable{
 							r.setPareja1(this);
 							r.setPareja2(otraPareja);
 							r.setFechaHora(Reto.siguienteFechaHora(hora.getHoraDisponible()));
-							horas.add(r);
+							boolean anyadir=true;
+							for (Reto r1: this.getRetos()) {
+								if (r1.compareTo(r)==0)
+									anyadir=false;
+							}
+							for (Reto r2: otraPareja.getRetos()) {
+								if (r2.compareTo(r)==0)
+									anyadir=false;
+							}
+							if (anyadir)
+								horas.add(r);
 						}
 					}
 				}
@@ -149,6 +159,8 @@ public class Pareja implements Comparable{
 		retos.addAll(this.getRetosRecibidos());
 		return retos;
 	}
+	
+
 
 	@Override
 	public int compareTo(Object o) {

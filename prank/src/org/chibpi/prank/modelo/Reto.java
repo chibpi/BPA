@@ -28,6 +28,13 @@ public class Reto implements Comparable{
 	
 	@Stereotype("DATETIME")
 	private Date fechaHora;
+	
+	@Stereotype("DATETIME")
+	private Date fechaHoraPropuesto;
+	
+	@Stereotype("DATETIME")
+	private Date fechaHoraAceptado;
+
 
 	@Enumerated(EnumType.STRING)
 	 private Estado estado;
@@ -124,6 +131,30 @@ public class Reto implements Comparable{
 
 	public void setFechaHora(Date fechaHora) {
 		this.fechaHora = fechaHora;
+	}
+
+
+
+	public Date getFechaHoraPropuesto() {
+		return fechaHoraPropuesto;
+	}
+
+
+
+	public void setFechaHoraPropuesto(Date fechaHoraPropuesto) {
+		this.fechaHoraPropuesto = fechaHoraPropuesto;
+	}
+
+
+
+	public Date getFechaHoraAceptado() {
+		return fechaHoraAceptado;
+	}
+
+
+
+	public void setFechaHoraAceptado(Date fechaHoraAceptado) {
+		this.fechaHoraAceptado = fechaHoraAceptado;
 	}
 
 
